@@ -77,6 +77,10 @@ header .fondoHeader {
     z-index: 2;
 }
 
+.nosotros .title {
+    grid-column: 1/-1;
+}
+
 .nosotros .textNosotros {
     padding: 140px 40px;
 }
