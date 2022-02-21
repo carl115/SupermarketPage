@@ -13,6 +13,14 @@ body {
     overflow-x: hidden;
 }
 
+.title {
+    width: 100%;
+    margin: 35px 0;
+    text-align: center;
+    font-size: 40px;
+    color: #74C900;
+}
+
 /* HEADER */
 header {
     position: relative;
