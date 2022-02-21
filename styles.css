@@ -43,7 +43,7 @@ header nav {
 
 header nav a {
     margin: 0 40px;
-    color: #ffffff;
+    color: #74C900;
     text-decoration: none;
     font-weight: 600;
     font-size: 19px;
@@ -51,7 +51,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #74C900;
+    color: #ffffff;
 }
 
 header h2 {
@@ -233,11 +233,11 @@ footer .linksFooter li {
 
 footer .linksFooter li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #74C900;
 }
 
 footer .linksFooter li a:hover {
-    color: #74C900;
+    color: #ffffff;
 }
 
 footer .create {
@@ -260,10 +260,10 @@ footer .links-social li a {
     margin: 0 17px;
     font-size: 35px;
     text-decoration: none;
-    color: #ffffff;
+    color: #74C900;
 }
 
 footer .links-social li a:hover {
-    color: #74C900;
+    color: #ffffff;
 }
 /*-/-*/
