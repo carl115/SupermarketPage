@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 html {
@@ -9,13 +10,69 @@ html {
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    background: #194B00;
+    width: 100%;
+    padding: 10px 80px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     overflow-x: hidden;
 }
 
+/* NAV BAR */
+nav {
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+nav.activo {
+    right: 0;
+}
+
+nav a {
+    margin: 0 40px;
+    color: #74C900;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    transition: color linear 800ms;
+}
+
+nav .btn-cancel-menu {
+    display: none;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+/*-/-*/
+
+/* MENU */
+.menu {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu .btn-menu {
+    background: #74C900;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    font-size: 25px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    z-index: 10;
+}
+/*-/-*/
+
 .title {
     width: 100%;
-    margin: 35px 0;
     text-align: center;
     font-size: 40px;
     color: #74C900;
@@ -23,117 +80,39 @@ body {
 
 /* HEADER */
 header {
+    background: url(./imgs/pexels-rauf-allahverdiyev-1367243.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 450px;
-    position: relative;
-}
-
-header .contentHeader {
-    width: 100%;
+    height: 350px;
     display: flex;
-    flex-direction: column-reverse;
-    position: absolute;
-    z-index: 2;
-}
-
-header nav {
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-header nav a {
-    margin: 0 40px;
-    color: #74C900;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 19px;
-    transition: color linear 800ms;
-}
-
-header nav a:hover {
-    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px 10px 0 0;
 }
 
 header h2 {
-    position: relative;
-    top: 165px;
-    left: 480px;
+    text-shadow: 4px 0 1px #000000;
+    color: #ffffff;
     font-size: 40px;
     font-weight: 600;
 }
 
-header .fondoHeader {
-    background: url('./imgs/pexels-rauf-allahverdiyev-1367243.jpg');
-    background-position: center;
-    background-size: 120%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    filter: blur(7px);
-    z-index: 1;
-}
-/*-/-*/
-
-/* NOSOTROS */
-.nosotros {
-    background: #000000;
+header p {
+    text-shadow: 2px 0 1px #000000;
     color: #ffffff;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    z-index: 2;
-}
-
-.nosotros .title {
-    grid-column: 1/-1;
-}
-
-.nosotros .textNosotros {
-    padding: 140px 40px;
-}
-
-.nosotros .textNosotros h2{
-    margin-bottom: 15px;
-    font-size: 30px;
-}
-
-.nosotros .textNosotros p {
-    margin-bottom: 20px;
-}
-
-.nosotros .perfilesNosotros {
-    padding: 70px 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.nosotros .perfilesNosotros .perfil{
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nosotros .perfilesNosotros .fotoPerfil {
-    background: #74C900;
-    width: 160px;
-    height: 90px;
-    margin-right: 30px;
-    border-radius: 50%;
-}
-
-.nosotros .perfilesNosotros .textPerfil .name {
-    color: #9B9C9B;
-    font-family: 'Nunito', italic;
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 20px;
 }
 /*-/-*/
 
 /* NUESTROS PRODUCTOS */
 .nuestrosProductos {
     background: #000000;
+    width: 100%;
+    padding: 40px 0;
     color: #ffffff;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -145,76 +124,189 @@ header .fondoHeader {
 }
 
 .nuestrosProductos .cardProducto {
-    width: 600px;
-    height: 200px;
-    margin: 20px 35px;
-    border: 1px solid #ffffff;
+    width: 400px;
+    height: 400px;
+    margin: 30px 0;
+    border-radius: 5px;
     display: flex;
 }
 
-.nuestrosProductos .cardProducto figure {
-    width: 250px;
-    height: 100%;
+.nuestrosProductos .cardProducto:nth-child(2) {
+    background: url(./imgs/ChickenProducts_Lead.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-.nuestrosProductos .cardProducto figure img {
+.nuestrosProductos .cardProducto:nth-child(3) {
+    background: url(./imgs/benefits-of-broccoli-1200x628-facebook-1200x628.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nuestrosProductos .cardProducto:nth-child(4) {
+    background: url(./imgs/health-benefits-of-apples-1200x628-facebook-1200x628.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nuestrosProductos .cardProducto:nth-child(5) {
+    background: url(./imgs/mango_p.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nuestrosProductos .cardProducto:nth-child(6) {
+    background: url(./imgs/maxresdefault.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nuestrosProductos .cardProducto:nth-child(7) {
+    background: url(./imgs/redmeat.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nuestrosProductos .cardProducto:hover .contenedor {
+    filter: opacity(.8);
+}
+
+.nuestrosProductos .cardProducto .contenedor {
+    background: #000000;
     width: 100%;
-    height: 100%;
+    padding: 0 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    filter: opacity(0);
+    transition: all 1s;
 }
 
-.nuestrosProductos .cardProducto .textCard {
-    width: 400px;
-    height: 150px;
-    margin: 25px;
-    border: 1px solid #ffffff;
-    padding: 5px;
-}
-
-.nuestrosProductos .cardProducto .textCard span{
+.nuestrosProductos .cardProducto .contenedor .pAhora {
     color: #74C900;
 }
 
-.nuestrosProductos .cardProducto .textCard .PrecioAnterior {
-    font-size: 15px;
-    color: #E6391A;
+.nuestrosProductos .cardProducto .contenedor .pAntes {
+    color: #CF250A;
     text-decoration: line-through;
+}
+
+.nuestrosProductos .cardProducto .contenedor .btn-producto {
+    background: transparent;
+    width: 170px;
+    height: 40px;
+    margin-top: 25px;
+    color: #74C900;
+    font-size: 15px;
+    border: 1px solid #74C900;
+    cursor: pointer;
+}
+/*-/-*/
+
+/* NOSOTROS */
+.nosotros {
+    background: #74C900;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.nosotros h2 {
+    color: #ffffff;
+    grid-column: 1/-1;
+}
+
+.nosotros .textInformacion {
+    margin-left: 100px;
+    color: #ffffff;
+    grid-column: 1/2;
+}
+
+.nosotros .textInformacion strong {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.nosotros .textInformacion p {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.nosotros .icon {
+    font-size: 250px;
+    color: #ffffff;
 }
 /*-/-*/
 
 /* MAS INFORMACION */
 .masInformacion {
-    padding: 85px 0;
+    background: #000000;
+    width: 100%;
+    padding: 40px 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.masInformacion h2 {
+    grid-column: 1/-1;
+}
+
+.masInformacion .card-info {
+    width: 300px;
+    margin: 35px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.masInformacion .textInformacion {
-    padding: 0 80px;
+.masInformacion .card-info strong {
+    width: 100%;
+    padding-bottom: 20px;
+    color: #74C900;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid #74C900;
 }
 
-.masInformacion .textInformacion h2 {
-    margin-bottom: 25px;
-    font-size: 35px;
+.masInformacion .card-info .contenido {
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.masInformacion .textInformacion p {
-    font-size: 18px;
+.masInformacion .card-info .contenido p {
+    color: #ffffff;
 }
 
-.masInformacion .icon {
-    margin-right: 100px;
-    font-size: 250px;
+.masInformacion .card-info .contenido a {
+    background: #74C900;
+    padding: 10px 40px;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #74C900;
+    transition: all 800ms;
+}
+
+.masInformacion .card-info .contenido a:hover {
+    background: transparent;
+    color: #74C900;
 }
 /*-/-*/
 
 /* FOOTER */
 footer {
-    background: #000000;
+    background: #323232 ;
     width: 100%;
-    height: 500px;
+    height: 350px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
@@ -225,6 +317,7 @@ footer .linksFooter {
     align-items: center;
     flex-direction: column;
     list-style: none;
+    grid-column: 1/-1;
 }
 
 footer .linksFooter li {
@@ -261,9 +354,198 @@ footer .links-social li a {
     font-size: 35px;
     text-decoration: none;
     color: #74C900;
+    cursor: pointer;
 }
 
 footer .links-social li a:hover {
     color: #ffffff;
+}
+/*-/-*/
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    .nuestrosProductos .cardProducto {
+        width: 350px;
+        height: 350px;
+    }
+
+    .nuestrosProductos .cardProducto .contenedor {
+        background: rgba( 0, 0, 0, .5);
+        filter: opacity(1);
+    }
+}
+
+@media (max-width: 425px) {
+    nav {
+        background: #74C900;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -305px;
+        z-index: 20;
+        transition: all 1s;
+    }
+
+    nav a {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    nav .btn-cancel-menu {
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        display: block;
+        color: #CE2D2D;
+        font-size: 17px;
+        border: 1px solid #CE2D2D;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav .btn-cancel-menu i {
+        transform: rotate(45deg);
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    header h2 {
+        font-size: 30px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .nuestrosProductos {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros .textInformacion {
+        margin: 0;
+        margin-top: 20px;
+        padding: 0 30px;
+        grid-column: 1/-1;
+    }
+
+    .nosotros .icon {
+        display: none;
+    }
+
+    .masInformacion {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    footer .linksFooter {
+        display: none;  
+    }
+
+    footer .create {
+        grid-column: 1/-1;
+        grid-row: 3/-1;
+    }
+
+    footer .links-social {
+        margin-top: 15px;
+        grid-column: 1/-1;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding-top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .nuestrosProductos .cardProducto {
+        width: 300px;
+        height: 300px;
+    }
+
+    .nuestrosProductos .cardProducto h2 {
+        font-size: 20px;
+    }
+
+    .nuestrosProductos .cardProducto p {
+        font-size: 13px;
+    }
+
+    .nuestrosProductos .cardProducto strong {
+        font-size: 13px;
+    }
+
+    .nuestrosProductos .cardProducto span {
+        font-size: 13px;
+    }
+
+    .nuestrosProductos .cardProducto .contenedor .btn-producto {
+        width: 130px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .nosotros .textInformacion strong {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    nav a {
+        font-size: 15px;
+    }
+
+    header h2 {
+        font-size: 25px;
+    }
+
+    .nuestrosProductos .cardProducto {
+        width: 270px;
+        height: 270px;
+    }
+
+    .nuestrosProductos .cardProducto h2 {
+        font-size: 20px;
+    }
+
+    .nuestrosProductos .cardProducto p {
+        font-size: 12px;
+    }
+
+    .nuestrosProductos .cardProducto strong {
+        font-size: 12px;
+    }
+
+    .nuestrosProductos .cardProducto span {
+        font-size: 12px;
+    }
+
+    .nuestrosProductos .cardProducto .contenedor .btn-producto {
+        width: 110px;
+        height: 30px;
+        font-size: 12px;
+    }
 }
 /*-/-*/
